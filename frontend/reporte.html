@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reporte - Elevadores Montacarga E.I.R.L</title>
+  <link rel="stylesheet" href="/frontend/styles/reporte.css" />
+</head>
+<body>
+  <div class="reporte-container">
+    <!-- Título de la tabla principal -->
+    <h2 class="titulo-inventario">Inventario General</h2>
+
+    <!-- Filtro por categoría entre el título y la tabla -->
+    <div class="reporte-form" style="margin-bottom: 16px;">
+      <div class="filtros-row">
+        <div class="filtros-categoria">
+          <label for="filtro-categoria">Categoría:</label>
+          <select id="filtro-categoria">
+            <option value="todas">Todas las categorías</option>
+            <option value="EPPs">EPPs</option>
+            <option value="Herramientas de Trabajo">Herramientas de Trabajo</option>
+            <option value="Materiales">Materiales</option>
+          </select>
+        </div>
+        <!-- Botones de exportación -->
+        <div class="filtros-imprimir">
+          <span>Imprimir</span>
+          <button id="btn-excel">Excel</button>
+          <button id="btn-pdf">PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla principal -->
+    <div class="tabla-columna">
+      <table class="tabla-inventario">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Costo</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Datos de productos -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="/frontend/controller/reporte.js"></script>
+</body>
+</html>

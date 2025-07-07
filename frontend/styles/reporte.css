@@ -1,0 +1,211 @@
+.reporte-container {
+  flex: 1;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+  padding: 24px 18px 30px 18px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.tabla-columna {
+  margin-bottom: 18px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-columna table,
+.historial-col table {
+  width: 100%;
+  min-width: 0;
+  table-layout: auto;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: #fff;
+  border-radius: 8px 8px 0 0;      /* Esquinas superiores redondeadas */
+  overflow: hidden;                /* Oculta bordes sobresalientes */
+  box-shadow: 0 0 5px rgba(0,0,0,0.08); /* Sombra suave */
+}
+
+.tabla-columna th, .tabla-columna td,
+.historial-col th, .historial-col td {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.tabla-columna th,
+.historial-col th {
+  background: #21283d;
+  color: #fff;
+  font-weight: 600;
+  border-top: none;
+  letter-spacing: 0.5px;
+}
+
+.tabla-columna th:first-child,
+.historial-col th:first-child {
+  border-top-left-radius: 8px;     /* Redondea esquina superior izquierda */
+}
+
+.tabla-columna th:last-child,
+.historial-col th:last-child {
+  border-top-right-radius: 8px;    /* Redondea esquina superior derecha */
+}
+
+.tabla-columna tr:last-child td,
+.historial-col tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-columna tbody tr:nth-child(even),
+.historial-col tbody tr:nth-child(even) {
+  background-color: #f5f8fa;
+}
+
+.tabla-columna tbody tr:hover,
+.historial-col tbody tr:hover {
+  background-color: #e6f0fa;
+  transition: background 0.2s;
+}
+
+.filtros-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 12px 0 18px 0;
+  flex-wrap: wrap;
+}
+
+.filtros-col {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filtros-col label {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.filtros-radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filtros-radio label {
+  font-size: 15px;
+}
+
+.filtros-imprimir {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filtros-imprimir span {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.filtros-imprimir button {
+  background: #21283d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.filtros-imprimir button:hover {
+  background: #0056b3;
+}
+
+.historiales-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.historial-col {
+  flex: 1 1 0;
+  min-width: 320px;
+}
+
+.historial-col h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.reporte-form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.08);
+  padding: 3px 12px 1px 12px;   /* <--- Cambiado: antes era 18px 16px 22px 16px */
+  margin-bottom: 12px;           /* <--- Cambiado: antes era 18px */
+  width: fit-content;            /* <--- Añadido: se ajusta al contenido */
+  min-width: 0;                  /* <--- Añadido: evita que se expanda demasiado */
+}
+
+/* Opcional: separa las tablas de historial del borde blanco */
+.historiales-row {
+  margin-top: 10px;
+}
+
+.titulo-inventario {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .historiales-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .historial-col {
+    min-width: 0;
+  }
+  .filtros-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+.filtros-categoria {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.filtros-categoria label {
+  font-weight: bold;
+  font-size: 17px;
+  color: #333;
+}
+
+.filtros-categoria input,
+.filtros-categoria select {
+  font-size: 15px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 110px;
+  background: #fff;
+}

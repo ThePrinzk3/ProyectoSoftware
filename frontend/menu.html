@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu - Elevadores Montacarga E.I.R.L</title>
+  <link rel="stylesheet" href="/frontend/styles/menu.css" />
+</head>
+<body>
+  <header>
+    <h1>Elevadores Montacarga E.I.R.L</h1>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <a href="#" id="producto-link">Producto</a>
+      <a href="#" id="stock-link">Stock</a>
+      <a href="#" id="reporte-link">Reporte</a>
+
+      <div class="sidebar-bottom">
+        <a href="/frontend/login_index.html" class="btn-logout" title="Cerrar Sesión">
+          <i class='bx bx-log-out'></i> Cerrar Sesión
+        </a>
+        <div class="sidebar-user">
+          <i class='bx bx-user-circle'></i>
+          <div>
+            <span class="sidebar-username" id="sidebar-username">Usuario</span>
+            <span class="sidebar-time" id="sidebar-time">00:00:00</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <iframe id="contenido-frame" style="width: 100%; border: none; margin-left: 5px;"></iframe>
+
+    <!-- Modal de confirmación -->
+    <div id="logout-modal" class="modal-bg" style="display:none;">
+      <div class="modal-content">
+        <p>¿Seguro que deseas cerrar sesión?</p>
+        <div class="modal-buttons">
+          <button id="confirm-logout" class="btn-modal">Sí, salir</button>
+          <button id="cancel-logout" class="btn-modal btn-cancel">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader animado -->
+    <div id="loader-bg" class="loader-bg" style="display:none;">
+      <div class="loader"></div>
+      <span class="loader-text">Cargando...</span>
+    </div>
+  </div>
+
+  <script src="/frontend/controller/menu.js"></script>
+
+</body>
+</html>

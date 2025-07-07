@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stock - Elevadores Montacarga E.I.R.L</title>
+  <link rel="stylesheet" href="/frontend/styles/stock.css" />
+</head>
+<body>
+  <div class="stock-container">
+    <h2>Gestión de Stock</h2>
+    <form id="stock-form">
+      <div class="fila-formulario">
+        <div class="grupo-campo">
+          <label for="codigo">Código:</label>
+          <input type="text" id="codigo" name="codigo" />
+        </div>
+        <div class="grupo-campo">
+          <label for="cantidad-stock">Cantidad de Stock:</label>
+          <input type="number" id="cantidad-stock" name="cantidad-stock" min="1">
+        </div>
+      </div>
+      <div class="botones-row">
+        <button type="button" id="btn-entrada">Registrar Entrada</button>
+        <button type="button" id="btn-salida">Registrar Salida</button>
+        <button type="button" id="btn-limpiar">Limpiar</button>
+        <button type="button" id="btn-buscar">Buscar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Tabla fuera del fondo degradante -->
+  <div class="tabla-columna">
+    <table class="tabla-stock">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Stock Actual</th>
+          <th>Tipo de Movimiento</th>
+          <th>Cantidad del Movimiento</th>
+          <th>Fecha del Movimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filas dinámicas aquí -->
+         
+      </tbody>
+    </table>
+  </div>
+  <script src="/frontend/controller/stock.js"></script>
+</body>
+</html>
