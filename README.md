@@ -3,3 +3,5 @@
 ## Requisitos
 
 programa no mas :v 
+
+Version 2 - Solo probé que funcione aun xd 
