@@ -2,8 +2,8 @@
 
 ## Requisitos
 
-programa no mas :v 
+Ejemplo para abrir el archivo
 
-Version 2 - Solo probé que funcione aun xd 
+cd "C:\Users\ThePrinz\Desktop\PROYECTO WEB - PHP\backend" 
+php -S localhost:8000 -t public
 
-Version 3 - aer xd
