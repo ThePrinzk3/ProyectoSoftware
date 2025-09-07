@@ -15,9 +15,6 @@ class ReporteController
     public function __construct()
     {
         global $pdo;
-        if (!$pdo) {
-            $pdo = crearConexionPDO();
-        }
         $this->model = new ReporteModel($pdo);
     }
 

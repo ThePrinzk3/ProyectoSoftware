@@ -13,7 +13,7 @@ class ProductoController {
     }
 
     // Mostrar producto.html
-    public function mostrarProducto() {
+    public function mostrarProductos() {
         $ruta = realpath(__DIR__ . '/../../../frontend/producto.html');
         if ($ruta && file_exists($ruta)) {
             header('Content-Type: text/html; charset=utf-8');

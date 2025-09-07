@@ -141,7 +141,6 @@ switch ($uri) { // Switch basado en la ruta para servir vistas HTML u otros cont
     case '/reporte':
         require_once __DIR__ . '/../src/controller/reporteController.php'; // Incluye controlador de reportes.
         $controller = new \Src\Controller\ReporteController(); // Instancia el controller.
-        $controller->mostrarReporte(); // Muestra la vista de reportes.
         break;
 
 } // Fin del switch
