@@ -1,52 +1,62 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es"> <!-- Idioma: español -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stock - Elevadores Montacarga E.I.R.L</title>
+  <meta charset="UTF-8" /> <!-- Codificación UTF-8 (soporta ñ, tildes, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Diseño responsive -->
+  <title>Stock - Elevadores Montacarga E.I.R.L</title> <!-- Título de la pestaña -->
+
+  <!-- Estilos para la página de stock -->
   <link rel="stylesheet" href="/frontend/styles/stock.css" />
 </head>
 <body>
+  <!-- Contenedor principal -->
   <div class="stock-container">
     <h2>Gestión de Stock</h2>
+
+    <!-- Formulario de registro de entradas y salidas -->
     <form id="stock-form">
       <div class="fila-formulario">
+        <!-- Campo para el código del producto -->
         <div class="grupo-campo">
           <label for="codigo">Código:</label>
           <input type="text" id="codigo" name="codigo" />
         </div>
+        <!-- Campo para cantidad de stock -->
         <div class="grupo-campo">
           <label for="cantidad-stock">Cantidad de Stock:</label>
           <input type="number" id="cantidad-stock" name="cantidad-stock" min="1">
         </div>
       </div>
+
+      <!-- Botones de acción -->
       <div class="botones-row">
-        <button type="button" id="btn-entrada">Registrar Entrada</button>
-        <button type="button" id="btn-salida">Registrar Salida</button>
-        <button type="button" id="btn-limpiar">Limpiar</button>
-        <button type="button" id="btn-buscar">Buscar</button>
+        <button type="button" id="btn-entrada">Registrar Entrada</button> <!-- Aumenta stock -->
+        <button type="button" id="btn-salida">Registrar Salida</button> <!-- Disminuye stock -->
+        <button type="button" id="btn-limpiar">Limpiar</button> <!-- Limpia los campos -->
+        <button type="button" id="btn-buscar">Buscar</button> <!-- Busca movimientos -->
       </div>
     </form>
   </div>
 
-  <!-- Tabla fuera del fondo degradante -->
+  <!-- Tabla para mostrar los movimientos de stock -->
   <div class="tabla-columna">
     <table class="tabla-stock">
       <thead>
         <tr>
-          <th>Código</th>
-          <th>Stock Actual</th>
-          <th>Tipo de Movimiento</th>
-          <th>Cantidad del Movimiento</th>
-          <th>Fecha del Movimiento</th>
+          <th>Código</th> <!-- Código del producto -->
+          <th>Stock Actual</th> <!-- Stock después del movimiento -->
+          <th>Tipo de Movimiento</th> <!-- Entrada o salida -->
+          <th>Cantidad del Movimiento</th> <!-- Cuánto se agregó o retiró -->
+          <th>Fecha del Movimiento</th> <!-- Fecha en la que se registró -->
         </tr>
       </thead>
       <tbody>
-        <!-- Filas dinámicas aquí -->
-         
+        <!-- Aquí se insertan dinámicamente las filas con JS -->
       </tbody>
     </table>
   </div>
+
+  <!-- Archivo JavaScript que maneja la lógica de stock -->
   <script src="/frontend/controller/stock.js"></script>
 </body>
 </html>

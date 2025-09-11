@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es"> <!-- Idioma principal: español -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reporte - Elevadores Montacarga E.I.R.L</title>
+  <meta charset="UTF-8" /> <!-- Soporte para tildes, ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Diseño adaptable a móviles -->
+  <title>Reporte - Elevadores Montacarga E.I.R.L</title> <!-- Título en la pestaña del navegador -->
+
+  <!-- Estilos principales para la página de reportes -->
   <link rel="stylesheet" href="/frontend/styles/reporte.css" />
 </head>
 <body>
+  <!-- Contenedor principal de la sección de reportes -->
   <div class="reporte-container">
-    <!-- Título de la tabla principal -->
+
+    <!-- Título de la sección -->
     <h2 class="titulo-inventario">Inventario General</h2>
 
-    <!-- Filtro por categoría entre el título y la tabla -->
+    <!-- Filtro de categoría y botones de exportación -->
     <div class="reporte-form" style="margin-bottom: 16px;">
       <div class="filtros-row">
+
+        <!-- Filtro de categorías -->
         <div class="filtros-categoria">
           <label for="filtro-categoria">Categoría:</label>
           <select id="filtro-categoria">
@@ -23,33 +29,36 @@
             <option value="Materiales">Materiales</option>
           </select>
         </div>
-        <!-- Botones de exportación -->
+
+        <!-- Botones para exportar el reporte -->
         <div class="filtros-imprimir">
           <span>Imprimir</span>
-          <button id="btn-excel">Excel</button>
-          <button id="btn-pdf">PDF</button>
+          <button id="btn-excel">Excel</button> <!-- Exporta a Excel -->
+          <button id="btn-pdf">PDF</button> <!-- Exporta a PDF -->
         </div>
       </div>
     </div>
 
-    <!-- Tabla principal -->
+    <!-- Tabla principal donde se muestran los productos -->
     <div class="tabla-columna">
       <table class="tabla-inventario">
         <thead>
           <tr>
-            <th>Código</th>
-            <th>Producto</th>
-            <th>Categoría</th>
-            <th>Costo</th>
-            <th>Stock</th>
+            <th>Código</th> <!-- Código del producto -->
+            <th>Producto</th> <!-- Nombre del producto -->
+            <th>Categoría</th> <!-- Categoría del producto -->
+            <th>Costo</th> <!-- Costo del producto -->
+            <th>Stock</th> <!-- Cantidad en stock -->
           </tr>
         </thead>
         <tbody>
-          <!-- Datos de productos -->
+          <!-- Aquí se insertarán dinámicamente los datos de productos con JS -->
         </tbody>
       </table>
     </div>
   </div>
+
+  <!-- Archivo JavaScript que maneja la lógica del reporte (filtros, exportaciones, etc.) -->
   <script src="/frontend/controller/reporte.js"></script>
 </body>
 </html>

@@ -1,56 +1,72 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Idioma principal: español -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menu - Elevadores Montacarga E.I.R.L</title>
+  <meta charset="UTF-8" /> <!-- Soporte para tildes, ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Diseño responsive -->
+  <title>Menu - Elevadores Montacarga E.I.R.L</title> <!-- Título de la pestaña -->
+  
+  <!-- Archivo CSS con estilos para el menú -->
   <link rel="stylesheet" href="/frontend/styles/menu.css" />
 </head>
 <body>
+  <!-- Encabezado principal -->
   <header>
     <h1>Elevadores Montacarga E.I.R.L</h1>
   </header>
 
-  <div class="container">
+  <div class="container"> <!-- Contenedor general -->
+
+    <!-- Barra lateral de navegación -->
     <nav class="sidebar">
+      <!-- Enlaces a las secciones principales -->
       <a href="#" id="producto-link">Producto</a>
       <a href="#" id="stock-link">Stock</a>
       <a href="#" id="reporte-link">Reporte</a>
 
+      <!-- Zona inferior de la barra lateral -->
       <div class="sidebar-bottom">
+        <!-- Botón de cerrar sesión con ícono -->
         <a href="/frontend/login_index.html" class="btn-logout" title="Cerrar Sesión">
           <i class='bx bx-log-out'></i> Cerrar Sesión
         </a>
+
+        <!-- Información del usuario logueado -->
         <div class="sidebar-user">
-          <i class='bx bx-user-circle'></i>
+          <i class='bx bx-user-circle'></i> <!-- Ícono de usuario -->
           <div>
+            <!-- Nombre del usuario (se actualiza con JS) -->
             <span class="sidebar-username" id="sidebar-username">Usuario</span>
+            <!-- Hora actual en la barra lateral (también con JS) -->
             <span class="sidebar-time" id="sidebar-time">00:00:00</span>
           </div>
         </div>
       </div>
     </nav>
   
+    <!-- Área de contenido dinámico: carga las páginas dentro de un iframe -->
     <iframe id="contenido-frame" style="width: 100%; border: none; margin-left: 5px;"></iframe>
 
-    <!-- Modal de confirmación -->
+    <!-- Modal de confirmación para cerrar sesión -->
     <div id="logout-modal" class="modal-bg" style="display:none;">
       <div class="modal-content">
         <p>¿Seguro que deseas cerrar sesión?</p>
         <div class="modal-buttons">
+          <!-- Botón de confirmar salida -->
           <button id="confirm-logout" class="btn-modal">Sí, salir</button>
+          <!-- Botón para cancelar el cierre de sesión -->
           <button id="cancel-logout" class="btn-modal btn-cancel">Cancelar</button>
         </div>
       </div>
     </div>
 
-    <!-- Loader animado -->
+    <!-- Loader (pantalla de carga animada) -->
     <div id="loader-bg" class="loader-bg" style="display:none;">
-      <div class="loader"></div>
-      <span class="loader-text">Cargando...</span>
+      <div class="loader"></div> <!-- Animación de carga -->
+      <span class="loader-text">Cargando...</span> <!-- Texto de carga -->
     </div>
   </div>
 
+  <!-- Archivo JavaScript con la lógica del menú -->
   <script src="/frontend/controller/menu.js"></script>
 
 </body>

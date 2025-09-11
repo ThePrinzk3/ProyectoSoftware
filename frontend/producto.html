@@ -1,17 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es"> <!-- Idioma español -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Producto - Elevadores Montacarga E.I.R.L</title>
+  <meta charset="UTF-8" /> <!-- Soporta tildes, ñ y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Diseño adaptable a móviles -->
+  <title>Producto - Elevadores Montacarga E.I.R.L</title> <!-- Título en la pestaña del navegador -->
+
+  <!-- Estilos principales del formulario de producto -->
   <link rel="stylesheet" href="/frontend/styles/producto.css" />
+  <!-- Estilos para las tablas que muestran los productos -->
   <link rel="stylesheet" href="/frontend/styles/productotablas.css" />
 </head>
 <body>
+  <!-- Contenedor principal de la sección producto -->
   <div class="producto-container">
     <h2>Gestión de Producto</h2>
+
+    <!-- Formulario para registrar/gestionar productos -->
     <form id="producto-form">
 
+      <!-- Fila con los campos de código, nombre y categoría -->
       <div class="fila-formulario">
         <div class="grupo-campo">
           <label for="codigo">Código:</label>
@@ -23,6 +30,7 @@
         </div>
         <div class="grupo-campo">
           <label for="categoria">Categoría:</label>
+          <!-- Categorías disponibles, según selección se mostrarán campos adicionales -->
           <select id="categoria" name="categoria">
             <option value="">Seleccione una categoría</option>
             <option value="EPPs">EPPs</option>
@@ -32,6 +40,7 @@
         </div>
       </div>
 
+      <!-- Fila con costo y descripción -->
       <div class="fila-formulario">
         <div class="grupo-campo">
           <label for="costo">Costo:</label>
@@ -43,12 +52,13 @@
         </div>
       </div>
 
-      <!-- Solo EPPs -->
+      <!-- Campos dinámicos que solo aparecen según la categoría elegida -->
+      <!-- Solo para EPPs -->
       <div class="grupo-campo" id="campo-talla" style="display:none;">
         <label for="talla">Talla:</label>
         <input type="text" id="talla" name="talla">
       </div>
-      <!-- Solo Herramientas de Trabajo -->
+      <!-- Solo para Herramientas de Trabajo -->
       <div class="grupo-campo" id="campo-marca" style="display:none;">
         <label for="marca">Marca:</label>
         <input type="text" id="marca" name="marca">
@@ -57,12 +67,13 @@
         <label for="modelo">Modelo:</label>
         <input type="text" id="modelo" name="modelo">
       </div>
-      <!-- Solo Materiales -->
+      <!-- Solo para Materiales -->
       <div class="grupo-campo" id="campo-medida" style="display:none;">
         <label for="medida">Medida:</label>
         <input type="text" id="medida" name="medida">
       </div>
 
+      <!-- Botones de acción -->
       <div class="botones-row">
         <button type="button" id="btn-registrar">Registrar</button>
         <button type="button" id="btn-actualizar">Actualizar</button>
@@ -72,8 +83,14 @@
       </div>
     </form>
   </div>
+
+  <!-- Título que cambia según el contenido de la tabla -->
   <h3 id="titulo-tabla-producto" style="margin-left: 10px;"></h3>
+
+  <!-- Aquí se generará dinámicamente la tabla con los productos -->
   <div id="tabla-producto-container"></div>
+
+  <!-- Archivo JavaScript que controla la lógica del formulario y tabla -->
   <script src="/frontend/controller/producto.js"></script>
 </body>
 </html>

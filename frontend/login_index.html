@@ -1,42 +1,57 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Indica que el documento está en formato HTML5 -->
+<html lang="es"> <!-- Lenguaje principal del documento en español -->
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login/Signup Form</title>
+    <meta charset="UTF-8" /> <!-- Codificación de caracteres UTF-8 para soportar tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Hace que el diseño sea responsive en dispositivos móviles -->
+    <title>Login/Signup Form</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Enlace al archivo CSS personalizado para los estilos del login -->
     <link rel="stylesheet" href="/frontend/styles/login.css" />
+
+    <!-- Librería de iconos Boxicons (para usar los íconos de usuario y candado) -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
+    <div class="container"> <!-- Contenedor principal de la página -->
+
+        <!-- Sección del formulario de login -->
         <div class="form-box login">
-            <form action="#">
-                <h1>Elevadores Montacarga E.I.R.L</h1>
+            <form action="#"> <!-- Formulario sin acción definida (se maneja con JS) -->
+                <h1>Elevadores Montacarga E.I.R.L</h1> <!-- Título del formulario -->
+
+                <!-- Campo de entrada para el nombre de usuario -->
                 <div class="input-box">
                     <input type="text" id="username" placeholder="Username" required />
-                    <i class="bx bxs-user"></i>
+                    <i class="bx bxs-user"></i> <!-- Ícono de usuario -->
                 </div>
+
+                <!-- Campo de entrada para la contraseña -->
                 <div class="input-box">
                     <input type="password" id="password" placeholder="Password" required />
-                    <i class="bx bxs-lock-alt"></i>
+                    <i class="bx bxs-lock-alt"></i> <!-- Ícono de candado -->
                 </div>
+
+                <!-- Botón para iniciar sesión (manejado con JS) -->
                 <button type="button" class="btn login-btn">Login</button>
             </form>
         </div>
 
+        <!-- Panel lateral de bienvenida -->
         <div class="toggle-box">
             <div class="toggle-panel toggle-left">
-                <h1>Hola, Bienvenido!</h1>
+                <h1>Hola, Bienvenido!</h1> <!-- Mensaje de saludo -->
             </div>
         </div>
     </div>
 
+    <!-- Archivo JavaScript encargado de manejar la lógica del login -->
     <script src="/frontend/controller/login.js"></script>
 
+    <!-- Loader (pantalla de carga) que aparece mientras se procesa la autenticación -->
     <div id="loader-bg" class="loader-bg" style="display:none;">
-  <div class="loader"></div>
-  <span class="loader-text">Cargando...</span>
-</div>
+        <div class="loader"></div> <!-- Animación de carga -->
+        <span class="loader-text">Cargando...</span> <!-- Texto mostrado durante la carga -->
+    </div>
 
 </body>
 </html>
